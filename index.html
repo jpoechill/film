@@ -17,6 +17,11 @@
                         'inter': ['Inter', 'sans-serif'],
                     },
                     colors: {
+                        'midnight-blue': '#0D1B2A',
+                        'sandstone-gray': '#595959',
+                        'khmer-gold': '#D4AF37',
+                        'royal-blue': '#1E40AF',
+                        'palm-green': '#4E9A58',
                         'netflix-red': '#e50914',
                         'netflix-dark': '#141414',
                         'netflix-gray': '#2f2f2f',
@@ -74,12 +79,12 @@
     </style>
 </head>
 
-<body class="font-inter bg-netflix-dark text-white m-0 p-0">
+<body class="font-inter bg-midnight-blue text-white m-0 p-0">
     <!-- Header -->
     <header id="header"
-        class="fixed top-0 w-full z-50 py-5 transition-all duration-300 bg-gradient-to-b from-netflix-dark/90 via-netflix-dark/70 to-transparent">
+        class="fixed top-0 w-full z-50 py-5 transition-all duration-300 bg-gradient-to-b from-midnight-blue/80 via-midnight-blue/60 to-transparent">
         <nav class="flex justify-between items-center px-4 max-w-7xl mx-auto">
-            <a href="#" class="text-3xl font-bold text-netflix-red no-underline">KhmerCinema</a>
+            <a href="#" class="text-3xl font-bold text-khmer-gold no-underline">New Cinema</a>
             <ul class="flex gap-8 list-none m-0 p-0">
                 <li><a href="#films"
                         class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">Films</a>
@@ -95,36 +100,39 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="h-screen flex items-center relative overflow-hidden group">
+    <section class="h-[100vh] flex items-center relative overflow-hidden group">
+        <!-- Background Image -->
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-out group-hover:scale-110"
-            style="background-image: url('sophia-story.png');"></div>
-        <div
-            class="hero-gradient absolute inset-0 bg-gradient-to-t from-netflix-dark/80 to-transparent z-10 transition-all duration-1200">
+            style="background-image: url('sophia-story.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight-blue/80 via-midnight-blue/40 to-transparent">
+            </div>
         </div>
-        <div class="relative z-20 max-w-lg px-10 ml-4 pt-24">
+
+        <!-- Hero Content -->
+        <div class="relative z-20 max-w-lg px-4 ml-4 pt-24">
             <h1 class="text-6xl font-bold mb-4 text-shadow-lg">Sophia's Story</h1>
             <p class="text-xl mb-8 opacity-90 leading-relaxed">A young Cambodian-American woman discovers her mother's
                 hidden past through an old family recipe book, leading her on a journey of self-discovery and cultural
                 reconnection.</p>
             <div class="flex gap-3 flex-wrap">
                 <a href="#"
-                    class="watch-now-btn inline-flex items-center bg-netflix-red text-white px-6 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-red-600">▶
+                    class="watch-now-btn inline-flex items-center bg-royal-blue text-white px-6 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-royal-blue/80">▶
                     Watch Now</a>
                 <a href="#"
-                    class="inline-flex items-center bg-gray-600/70 text-white px-6 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-gray-600/40">ℹ
+                    class="inline-flex items-center bg-sandstone-gray/70 text-white px-6 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-sandstone-gray/50">ℹ
                     More Info</a>
             </div>
         </div>
     </section>
 
     <!-- Films Section -->
-    <section class="py-10 bg-netflix-dark">
+    <section class="py-10 bg-midnight-blue">
         <div class="max-w-7xl mx-auto px-4">
             <h2 class="text-2xl font-medium mb-8 text-white ml-4">Trending Now</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-16">
                 <!-- Sophia's Story -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('sophia-story.png'); background-size: cover; background-position: center;">
                         <div
@@ -142,7 +150,7 @@
 
                 <!-- Cage Night in Stockton -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('cage-night-stockton.png'); background-size: cover; background-position: center;">
                         <div
@@ -160,7 +168,7 @@
 
                 <!-- Brooklyn Dreams -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('brooklyn-dreams.png'); background-size: cover; background-position: center;">
                         <div
@@ -178,7 +186,7 @@
 
                 <!-- Late Night Vibes -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('late-night-vibes.png'); background-size: cover; background-position: center;">
                         <div
@@ -196,7 +204,7 @@
 
                 <!-- The Startup -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('startup.png'); background-size: cover; background-position: center;">
                         <div
@@ -214,7 +222,7 @@
 
                 <!-- Art & Soul -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('art-soul.png'); background-size: cover; background-position: center;">
                         <div
@@ -232,7 +240,7 @@
 
                 <!-- Street Dance -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('street-dance.png'); background-size: cover; background-position: center;">
                         <div
@@ -250,7 +258,7 @@
 
                 <!-- City Lights -->
                 <div
-                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    class="film-card bg-sandstone-gray/20 rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
                     <div class="film-image h-full relative"
                         style="background-image: url('0_3.jpeg'); background-size: cover; background-position: center;">
                         <div
@@ -270,7 +278,7 @@
     </section>
 
     <!-- Featured Section -->
-    <section id="featured" class="py-16 bg-gradient-to-r from-netflix-dark to-gray-900">
+    <section id="featured" class="py-16 bg-gradient-to-r from-midnight-blue to-sandstone-gray/30">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
@@ -280,10 +288,10 @@
                         and powerful performances.</p>
                     <div class="flex gap-4">
                         <a href="#"
-                            class="bg-netflix-red text-white px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-red-600">Explore
+                            class="bg-royal-blue text-white px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-royal-blue/80">Explore
                             More</a>
                         <a href="#"
-                            class="border border-white text-white px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-white hover:text-netflix-dark">Learn
+                            class="border border-khmer-gold text-khmer-gold px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-khmer-gold hover:text-midnight-blue">Learn
                             About Us</a>
                     </div>
                 </div>
@@ -297,19 +305,19 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-netflix-gray">
+    <section class="py-16 bg-sandstone-gray/10">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
                 <div class="space-y-4">
-                    <h3 class="text-5xl font-bold text-netflix-red">50+</h3>
+                    <h3 class="text-5xl font-bold text-khmer-gold">50+</h3>
                     <p class="text-xl text-gray-300">Films Produced</p>
                 </div>
                 <div class="space-y-4">
-                    <h3 class="text-5xl font-bold text-netflix-red">100+</h3>
+                    <h3 class="text-5xl font-bold text-khmer-gold">100+</h3>
                     <p class="text-xl text-gray-300">Talented Artists</p>
                 </div>
                 <div class="space-y-4">
-                    <h3 class="text-5xl font-bold text-netflix-red">1M+</h3>
+                    <h3 class="text-5xl font-bold text-khmer-gold">1M+</h3>
                     <p class="text-xl text-gray-300">Global Viewers</p>
                 </div>
             </div>
@@ -321,7 +329,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-bold text-netflix-red">KhmerCinema</h3>
+                    <h3 class="text-2xl font-bold text-khmer-gold">New Cinema</h3>
                     <p class="text-gray-400">Celebrating Cambodian talent in modern cinema.</p>
                 </div>
                 <div class="space-y-4">
@@ -403,6 +411,8 @@
             card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
             observer.observe(card);
         });
+
+
     </script>
 </body>
 
