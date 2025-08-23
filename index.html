@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khmer Cinema Spotlight - Modern Films with Cambodian Talent</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'netflix-red': '#e50914',
+                        'netflix-dark': '#141414',
+                        'netflix-gray': '#2f2f2f',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .film-card:has(.film-image:not([style*="background-image"])) {
+            display: none;
+        }
+
+        .hero-bg {
+            background-image: url('sophia-story.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .watch-now-btn:hover~.hero-gradient,
+        .watch-now-btn:hover+.hero-gradient {
+            background: linear-gradient(to top, rgba(20, 20, 20, 0.4), transparent);
+        }
+
+        .film-thumbnail-1 {
+            background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .film-thumbnail-2 {
+            background-image: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .film-thumbnail-3 {
+            background-image: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        .film-thumbnail-4 {
+            background-image: linear-gradient(45deg, #43e97b 0%, #38f9d7 100%);
+        }
+
+        .film-thumbnail-5 {
+            background-image: linear-gradient(45deg, #fa709a 0%, #fee140 100%);
+        }
+    </style>
+</head>
+
+<body class="font-inter bg-netflix-dark text-white m-0 p-0">
+    <!-- Header -->
+    <header id="header"
+        class="fixed top-0 w-full z-50 py-5 transition-all duration-300 bg-gradient-to-b from-netflix-dark/90 via-netflix-dark/70 to-transparent">
+        <nav class="flex justify-between items-center px-4 max-w-7xl mx-auto">
+            <a href="#" class="text-3xl font-bold text-netflix-red no-underline">KhmerCinema</a>
+            <ul class="flex gap-8 list-none m-0 p-0">
+                <li><a href="#films"
+                        class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">Films</a>
+                </li>
+                <li><a href="#featured"
+                        class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">Featured</a>
+                </li>
+                <li><a href="#about"
+                        class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center relative overflow-hidden group">
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-1000 ease-out group-hover:scale-110"
+            style="background-image: url('sophia-story.png');"></div>
+        <div
+            class="hero-gradient absolute inset-0 bg-gradient-to-t from-netflix-dark/80 to-transparent z-10 transition-all duration-1200">
+        </div>
+        <div class="relative z-20 max-w-lg px-10 ml-4 pt-24">
+            <h1 class="text-6xl font-bold mb-4 text-shadow-lg">Sophia's Story</h1>
+            <p class="text-xl mb-8 opacity-90 leading-relaxed">A young Cambodian-American woman discovers her mother's
+                hidden past through an old family recipe book, leading her on a journey of self-discovery and cultural
+                reconnection.</p>
+            <div class="flex gap-3 flex-wrap">
+                <a href="#"
+                    class="watch-now-btn inline-flex items-center bg-netflix-red text-white px-6 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-red-600">▶
+                    Watch Now</a>
+                <a href="#"
+                    class="inline-flex items-center bg-gray-600/70 text-white px-6 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-gray-600/40">ℹ
+                    More Info</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Films Section -->
+    <section class="py-10 bg-netflix-dark">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-2xl font-medium mb-8 text-white ml-4">Trending Now</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mb-16">
+                <!-- Sophia's Story -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('sophia-story.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">Sophia's Story</h3>
+                            <p class="text-sm text-gray-300 mb-3">A young Cambodian-American woman discovers her
+                                mother's hidden past through an old family recipe book, leading her on a journey of
+                                self-discovery and cultural reconnection.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Sophia Chen, David Kim, Maria Sopheak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cage Night in Stockton -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('cage-night-stockton.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">Cage Night in Stockton</h3>
+                            <p class="text-sm text-gray-300 mb-3">Set over the course of one fight night, we follow
+                                multiple perspectives — a rookie Khmer fighter, his trainer, a rival, and a promoter —
+                                as tensions boil before a brutal main event.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Alex Chann, Mike Bopha, Sarah Sopheak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Brooklyn Dreams -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('brooklyn-dreams.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">Brooklyn Dreams</h3>
+                            <p class="text-sm text-gray-300 mb-3">Three best friends navigate love, career ambitions,
+                                and family expectations in the vibrant streets of Brooklyn, where their Cambodian
+                                heritage meets American dreams.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Emma Srey, Chris Chann, Anna Bopha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Late Night Vibes -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('late-night-vibes.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">Late Night Vibes</h3>
+                            <p class="text-sm text-gray-300 mb-3">A late-night radio DJ discovers her voice has the
+                                power to connect people across the city, leading to unexpected friendships and romantic
+                                encounters.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Emma Srey, David Kim, Maria Sopheak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Startup -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('startup.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">The Startup</h3>
+                            <p class="text-sm text-gray-300 mb-3">Three tech-savvy friends launch a revolutionary app,
+                                but success brings unexpected challenges that test their friendship and cultural values.
+                            </p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Chris Chann, Anna Bopha, Tony Sopheak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art & Soul -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('art-soul.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">Art & Soul</h3>
+                            <p class="text-sm text-gray-300 mb-3">A struggling artist finds her voice through
+                                traditional Cambodian art forms, creating a fusion that captures the attention of the
+                                contemporary art world.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Maria Sopheak, Alex Chann, Emma Srey</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Street Dance -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('street-dance.png'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">Street Dance</h3>
+                            <p class="text-sm text-gray-300 mb-3">A talented street dancer must choose between pursuing
+                                her passion and fulfilling her family's expectations, leading to a powerful story of
+                                self-expression.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Sarah Sopheak, Mike Bopha, Chris Chann</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- City Lights -->
+                <div
+                    class="film-card bg-netflix-gray rounded-lg overflow-hidden transition-all duration-300 relative cursor-pointer h-96 group">
+                    <div class="film-image h-full relative"
+                        style="background-image: url('0_3.jpeg'); background-size: cover; background-position: center;">
+                        <div
+                            class="film-overlay absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                            <h3 class="text-lg font-semibold mb-2">City Lights</h3>
+                            <p class="text-sm text-gray-300 mb-3">A photographer captures the beauty of urban life
+                                through the lens of immigrant communities, finding love and purpose in unexpected
+                                places.</p>
+                            <div class="text-xs text-gray-400">
+                                <p>Cast: Tony Sopheak, Anna Bopha, Emma Srey</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="py-16 bg-gradient-to-r from-netflix-dark to-gray-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-bold">Khmer Cinema Rising</h2>
+                    <p class="text-xl text-gray-300 leading-relaxed">Discover the next generation of Cambodian-American
+                        filmmakers and actors who are reshaping the landscape of modern cinema with authentic stories
+                        and powerful performances.</p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="bg-netflix-red text-white px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-red-600">Explore
+                            More</a>
+                        <a href="#"
+                            class="border border-white text-white px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-white hover:text-netflix-dark">Learn
+                            About Us</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="w-full h-96 rounded-lg overflow-hidden"
+                        style="background-image: url('0_1.jpeg'); background-size: cover; background-position: center;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-netflix-gray">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="space-y-4">
+                    <h3 class="text-5xl font-bold text-netflix-red">50+</h3>
+                    <p class="text-xl text-gray-300">Films Produced</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-5xl font-bold text-netflix-red">100+</h3>
+                    <p class="text-xl text-gray-300">Talented Artists</p>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-5xl font-bold text-netflix-red">1M+</h3>
+                    <p class="text-xl text-gray-300">Global Viewers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-netflix-red">KhmerCinema</h3>
+                    <p class="text-gray-400">Celebrating Cambodian talent in modern cinema.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Films</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Latest Releases</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Coming Soon</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Collections</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Artists</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Actors</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Directors</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Writers</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Social Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 KhmerCinema. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('bg-netflix-dark/95');
+            } else {
+                header.classList.remove('bg-netflix-dark/95');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe film cards for staggered animation
+        document.querySelectorAll('.film-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(card);
+        });
+    </script>
+</body>
+
+</html>
