@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cage Night in Stockton - Khmer Cinema Spotlight</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'midnight-blue': '#0D1B2A',
+                        'sandstone-gray': '#595959',
+                        'khmer-gold': '#D4AF37',
+                        'royal-blue': '#1E40AF',
+                        'palm-green': '#4E9A58',
+                        'netflix-red': '#e50914',
+                        'netflix-dark': '#141414',
+                        'netflix-gray': '#2f2f2f',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-inter bg-midnight-blue text-white m-0 p-0">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 py-5 bg-netflix-dark/95">
+        <nav class="flex justify-between items-center px-4 max-w-7xl mx-auto">
+            <a href="index.html" class="text-3xl font-bold text-khmer-gold no-underline">New Cinema</a>
+            <ul class="flex gap-8 list-none m-0 p-0">
+                <li><a href="index.html#films"
+                        class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">Films</a>
+                </li>
+                <li><a href="index.html#featured"
+                        class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">Featured</a>
+                </li>
+                <li><a href="index.html#about"
+                        class="no-underline text-white font-normal transition-colors duration-300 text-sm hover:text-gray-300">About</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="h-[100vh] flex items-center relative overflow-hidden pt-24">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style="background-image: url('cage-night-stockton.png');">
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight-blue/90 via-midnight-blue/60 to-transparent">
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-20 max-w-4xl mx-auto px-4 text-center">
+            <h1 class="text-6xl font-bold mb-6 text-shadow-lg">Cage Night in Stockton</h1>
+            <p class="text-xl mb-8 opacity-90 leading-relaxed max-w-3xl mx-auto">Set over the course of one fight night,
+                we follow multiple perspectives — a rookie Khmer fighter, his trainer, a rival, and a promoter — as
+                tensions boil before a brutal main event.</p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="#"
+                    class="inline-flex items-center bg-royal-blue text-white px-8 py-4 rounded font-medium transition-colors duration-300 no-underline hover:bg-royal-blue/80 text-lg">▶
+                    Watch Now</a>
+                <a href="#"
+                    class="inline-flex items-center bg-sandstone-gray/70 text-white px-8 py-4 rounded font-medium transition-colors duration-300 no-underline hover:bg-sandstone-gray/50 text-lg">ℹ
+                    More Info</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Film Scenes & Moods Section -->
+    <section class="py-16 bg-sandstone-gray/10">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">In the Frame</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Scene 1: Training -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/training.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Rookie's Preparation</h3>
+                            <p class="text-xs text-gray-300">Alex Chann's final training session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 2: Backstage Tension -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/trainer.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Trainer's Guidance</h3>
+                            <p class="text-xs text-gray-300">Mike Bopha's mentorship in the locker room</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 3: Crowd Energy -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/venue.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Promoter's Arena</h3>
+                            <p class="text-xs text-gray-300">The underground fight venue comes alive</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 4: Family Drama -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/rival.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Rival's Arrival</h3>
+                            <p class="text-xs text-gray-300">Sarah Sopheak enters the scene</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 5: The Fight -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/main-event.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Brutal Main Event</h3>
+                            <p class="text-xs text-gray-300">Tensions explode in the cage</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 6: Stockton Streets -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/stockton.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">Stockton's Underground</h3>
+                            <p class="text-xs text-gray-300">The city that shaped them all</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 7: Trainer's Wisdom -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/each-character.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Price of Ambition</h3>
+                            <p class="text-xs text-gray-300">What each character stands to lose</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scene 8: Aftermath -->
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] rounded-lg overflow-hidden relative"
+                        style="background-image: url('images/cage-night-stockton/aftermath.png'); background-size: cover; background-position: center;">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all duration-300">
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="text-sm font-semibold text-white">The Aftermath</h3>
+                            <p class="text-xs text-gray-300">How the night changed everything</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Film Details Section -->
+    <section class="py-16 bg-midnight-blue">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Main Content -->
+                <div class="md:col-span-2 space-y-8">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Synopsis</h2>
+                        <p class="text-lg text-gray-300 leading-relaxed">
+                            Set over the course of one fight night, we follow multiple perspectives — a rookie Khmer
+                            fighter, his trainer, a rival, and a promoter — as tensions boil before a brutal main event.
+                            The film explores themes of honor, family, and the price of ambition in the underground
+                            fighting circuit of Stockton, California.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Cast</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="bg-sandstone-gray/20 p-6 rounded-lg">
+                                <h3 class="text-xl font-semibold mb-2">Alex Chann</h3>
+                                <p class="text-gray-300">Lead Role - Rookie Fighter</p>
+                            </div>
+                            <div class="bg-sandstone-gray/20 p-6 rounded-lg">
+                                <h3 class="text-xl font-semibold mb-2">Mike Bopha</h3>
+                                <p class="text-gray-300">Supporting Role - Trainer</p>
+                            </div>
+                            <div class="bg-sandstone-gray/20 p-6 rounded-lg">
+                                <h3 class="text-xl font-semibold mb-2">Sarah Sopheak</h3>
+                                <p class="text-gray-300">Supporting Role - Rival</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">Production Details</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Genre</h3>
+                                <p class="text-gray-300">Action, Drama, Sports</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Runtime</h3>
+                                <p class="text-gray-300">Coming Soon</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Release Date</h3>
+                                <p class="text-gray-300">Coming Soon</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Language</h3>
+                                <p class="text-gray-300">English, Khmer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-8">
+                    <div class="bg-sandstone-gray/20 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Quick Info</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li><strong>Director:</strong> Coming Soon</li>
+                            <li><strong>Writer:</strong> Coming Soon</li>
+                            <li><strong>Producer:</strong> Coming Soon</li>
+                            <li><strong>Cinematography:</strong> Coming Soon</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-sandstone-gray/20 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4">Related Films</h3>
+                        <ul class="space-y-3">
+                            <li><a href="#"
+                                    class="text-gray-300 hover:text-khmer-gold transition-colors duration-300">Sophia's
+                                    Story</a></li>
+                            <li><a href="#"
+                                    class="text-gray-300 hover:text-khmer-gold transition-colors duration-300">Brooklyn
+                                    Dreams</a></li>
+                            <li><a href="#"
+                                    class="text-gray-300 hover:text-khmer-gold transition-colors duration-300">Street
+                                    Dance</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-midnight-blue to-sandstone-gray/30">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">Stay Updated</h2>
+            <p class="text-xl text-gray-300 mb-8">Get notified when Cage Night in Stockton becomes available to watch.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="index.html"
+                    class="bg-royal-blue text-white px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-royal-blue/80">←
+                    Back to Home</a>
+                <a href="#"
+                    class="border border-khmer-gold text-khmer-gold px-8 py-3 rounded font-medium transition-colors duration-300 no-underline hover:bg-khmer-gold hover:text-midnight-blue">Notify
+                    Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-khmer-gold">New Cinema</h3>
+                    <p class="text-gray-400">Celebrating Cambodian talent in modern cinema.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Films</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white transition-colors duration-300">Latest
+                                Releases</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Coming Soon</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Collections</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Artists</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Actors</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Directors</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Writers</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-lg font-semibold">Connect</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Newsletter</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors duration-300">Social Media</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 KhmerCinema. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
